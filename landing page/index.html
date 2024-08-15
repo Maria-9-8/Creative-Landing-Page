@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-container">
+    <img src="images/page_Image.jpg" class="page-image">
+  <header class="header">
+    <div class="responsive-devices" data-translations = '{"desktop": "Desktop", "mobile": "Mobile", "tablet": "Tablet"}'>
+    </div>
+    <div class="header-container">
+      <img src="images/logo.png" alt="Logo" class="logo">
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Service</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <h1>Durable Trash Solution for <br>a clearer Tomorrow</br></h1>
+    <div class="sub-content">
+      <h2><span class="underscore">__</span> Full Services <span class="underscore">__</span></h2>
+      <h3>Book garbage removal from your home or business</h3>
+      <div class="service-content">
+        <img src="images/trash_removal.PNG">
+        <img src="images/junk_removal.PNG">
+        <img src="images/recycle.PNG">
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <section class="footer-on-left">
+      <div class="left-content">
+        <a href="#">Terms of Services</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Privacy Policy</a>
+        <div class="copy-right">
+          &copy; 2024 Toter LLC. All rights reserved.
+        </div>
+      </div>
+      
+    </section>
+    <section class="footer-on-right">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Company Logo">
+      </div>
+      <div class="address">
+        841 Meacham Road <br>Statsville , NC 28677
+      </div>
+      <div class="social">
+        <a href="#">Twitter</a>
+        <a href="#">FaceBook</a>
+        <a href="#" >YouTube</a>
+      </div>
+    </section> 
+  </footer>
+</div>
+  
+
+  <script>
+   const deviceContainer = document.querySelector('.responsive-devices');
+    
+    // Parse the JSON data in the data-translations attribute
+    const translations = JSON.parse(deviceContainer.getAttribute('data-translations'));
+    function getDeviceType() {
+        const width = window.innerWidth;
+        if (width <= 768) {
+            return translations.mobile; 
+        } else if (width <= 1024) {
+            return translations.tablet; 
+        } else {
+            return translations.desktop; 
+        }
+    }
+
+   
+   alert(`You are using a: ${getDeviceType()}`);
+
+
+    
+  </script>
+</body>
+</html>
