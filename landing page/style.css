@@ -123,9 +123,8 @@ body, html {
   display: grid;
   color: white;
   grid-template-columns: 1fr 1fr;
-  background-color: #288923;
   opacity: 0.8;
-  padding: 20px; 
+  padding-top: 20px; 
   margin-top: auto; 
 }
 
