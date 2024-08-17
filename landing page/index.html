@@ -10,8 +10,6 @@
   <div class="page-container">
     <img src="images/page_Image.jpg" class="page-image">
   <header class="header">
-    <div class="responsive-devices" data-translations = '{"desktop": "Desktop", "mobile": "Mobile", "tablet": "Tablet"}'>
-    </div>
     <div class="header-container">
       <img src="images/logo.png" alt="Logo" class="logo">
       <nav class="nav-bar">
@@ -66,29 +64,5 @@
     </section> 
   </footer>
 </div>
-  
-
-  <script>
-   const deviceContainer = document.querySelector('.responsive-devices');
-    
-    // Parse the JSON data in the data-translations attribute
-    const translations = JSON.parse(deviceContainer.getAttribute('data-translations'));
-    function getDeviceType() {
-        const width = window.innerWidth;
-        if (width <= 768) {
-            return translations.mobile; 
-        } else if (width <= 1024) {
-            return translations.tablet; 
-        } else {
-            return translations.desktop; 
-        }
-    }
-
-   
-   alert(`You are using a: ${getDeviceType()}`);
-
-
-    
-  </script>
 </body>
 </html>
